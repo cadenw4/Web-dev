@@ -23,8 +23,19 @@ html{font-family: Arial, Helvetica, sans-serif;}
 /* Challenge 13: When the visitor moves their mouse over images inside of the element with an id of secondGallery,
                  apply some other type of styling.
 */
-#secondGallery{ 
-
+#firstGallery:hover{
+    filter: grayscale(0)
 }
 
+#secondGallery:hover{
+    filter: grayscale(100);
+    
+}
+
+
+
+
 /* Challenge 14: Change the transition for all elements to 1 second */
+html{
+    transition:cubic-bezier(0.19, 1, 0.22, 1)
+}
