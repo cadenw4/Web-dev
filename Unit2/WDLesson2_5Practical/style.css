@@ -28,7 +28,7 @@ html{font-family: Arial, Helvetica, sans-serif;}
 }
 
 #secondGallery:hover{
-    filter: grayscale(100);
+    filter:contrast(50)
     
 }
 
