@@ -6,7 +6,9 @@
     <title>repl.it</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
    </head>
-  <body id="body">
+ 
+   <body id="body">
+    
     <script src="script.js"></script>
     <div id="banner" class="container center">
       <h1> Simple Arthmetic Formulas</h1>
@@ -24,6 +26,22 @@
       <div class="card">
         <!-- Challenge 1: Create the necessary UI in order to calculate the area and perimeter of a rectangle.  
          This will require separate buttons for area and perimeter each with their own event handler. -->
+
+             <div id="RectPerimeter">
+      <input type="text" id="number1" placeholder="Enter number*2">
+      <input type="button" value="+" onclick="recPerimeter()">
+      <input type="text" id="number2" placeholder="Enter number*2">
+      =
+          <span id="RectPerimeterOutput"></span>
+      </div>
+
+              <div id="RectArea">
+      <input type="text" id="number12" placeholder="Enter number">
+      <input type="button" value="*" onclick="recArea()">
+      <input type="text" id="number21" placeholder="Enter number">
+      =
+          <span id="RectAreaOutput"></span>
+      </div>
 
         <!-- Go to script.js to complete Challenge 2 --> 
 

@@ -24,7 +24,13 @@
     <div class="solutions">
       <!-- Challenge 1: UI for Average program. Note: User will enter three grades as three separate inputs. -->
       <!-- Challenge 2 is in script.js -->
-
+<div>
+  <input type="text" placeholder="Enter Grade 1" id="G1">
+  <input type="text" placeholder="Enter Grade 2" id="G2">
+  <input type="text" placeholder="Enter Grade 3" id="G3">
+  <input type="button" value="Calculate!" id="AvgCalc" onclick="Average()">
+  <span id="AvgResult"></span>
+</div>
     </div>
     <div class="container subbanner">
       <div>
@@ -36,6 +42,15 @@
     </div>
     <div class="solutions">
       <!-- Challenge 3: UI for Slope program.  Note: User will enter values for x1, y1, x2 and y2 as four separate inputs. -->
+       <div>
+        <input type="text" id="xx1" placeholder="Enter x1">
+        <input type="text" id="xx2" placeholder="Enter x2">
+        <input type="text" id="yy1" placeholder="Enter y1">
+        <input type="text" id="yy2" placeholder="Enter y2">
+        <input type="button" id="SlopeCalc" value="Calculate!" onclick="Slope()">
+        <span id="SlopeO"></span>
+        
+       </div>
       <!-- Challenge 4 is in script.js -->
     </div>
     <div class="container subbanner">
@@ -47,10 +62,35 @@
     </div>
     <div class="solutions last">
       <!-- Challenge 5: UI for BMI program. Note: User will enter their height and weight as two separate inputs. -->
+       <div>
+  <input type="text" placeholder="Weight (lb)" id="lb">
+  <input type="text" placeholder="Height (in.)" id="in">
+  <input type="button" value="Calculate!" id="BMICalc" onclick="BMI()">
+  <span id="MIBR"></span>
+</div>
+       
       <!-- Challenge 6 is in script.js -->
     </div>
     <div id="footer" class="container center">
       <h3>WD Lesson 3.6 Practical</h3>
     </div> 
+  
+        <div class="container subbanner">
+      <div>
+        <h3> Quadradic Formula </h3>
+        <p>This formula provides two solutions (roots) for the quadratic equation, represented by the ± symbol, indicating that there are generally two possible values for x.</p>
+
+        <a class="links"href="https://www.bing.com/ck/a?!&&p=7a27458bec1e597f92fb8a9fabb5efe888d5c7473d2d5e2f228f2ad16851a10bJmltdHM9MTc2ODg2NzIwMA&ptn=3&ver=2&hsh=4&fclid=32b4f410-3474-6faa-2ed7-e24d35a86ed1&psq=quadratic+formula&u=a1aHR0cHM6Ly93d3cubWF0aC5uZXQvcXVhZHJhdGljLWZvcm11bGE">Resource</a>
+      </div>
+    </div>
+    <div class="solutions">
+
+      <div>
+  <input type="text" placeholder="Enter value A" id="A1">
+  <input type="text" placeholder="Enter Value B" id="B2">
+  <input type="text" placeholder="Value C" id="C3">
+  <input type="button" value="Calculate!" id="AvgCalc" onclick="X()">
+  <span id="XR"></span>
+</div>
   </body>
 </html>
