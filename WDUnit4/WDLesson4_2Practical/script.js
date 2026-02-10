@@ -33,12 +33,14 @@ else{
 2) You will need to write HTML as part of the output.  
    For example, output.innerHTML = `<input src="pic.png">` would place the image in the <div>*/
 function pet(){
-  let animal = document.getElementById("animal");
-  let emotion = document.getElementById("emotion");
-  let output = document.getElementById("output");
+  let animal = document.getElementById("animal").value;
+  let emotion = document.getElementById("emotion").value;
+  let output = document.getElementById("output").value;
+  let picture = "";
+  output.innerHTML = `<img src="${picture}">`;
 
-  if (animal == "dog" && emotion == "funny"){
-    output.innerHTML = `<img src="funnyDog.jpg">`;
+  if (animal == "Bear" && emotion == "Funny"){
+    picture =  "WDUnit4/WDLesson4_2Practical/funnyBear.jpg";
   }
 
 }
