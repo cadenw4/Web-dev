@@ -6,6 +6,12 @@
 */
 let correct;
 function generateProblem(){
+       let problem = document.getElementById("problem");
+       let num1 = Math.floor(Math.random()* 10 + 1);
+       let num2 = Math.floor(Math.random()* 10 + 1);
+       correct = num1 + num2
+       let build = `${num1} + ${num2} =`
+       problem.innerHTML = build;
 
 }
 
@@ -19,9 +25,22 @@ function generateProblem(){
            Also include incorrect image afterwards
        4) Display msg in the output
 */
-function checkProblem(){
+function checkResponse(){
+       let response = document.getElementById("response").value;
+       let ans = document.getElementById("output")
+       let image = document.getElementById("img")
+       ans.innerHTML = "Answer is " + correct
 
-}
+       if (response=ans){
+              image.innerHTML = '<img src="correct.webp">'
+       }
+       if (response!=ans){
+              image.innerHTML = '<img src="incorrect.avif">'
+       }
+
+       }
+
+
 
 /* Challenge Bonus: Could you randomize the operations so it is not only addition.  
 Hint: Generate a random number to decide whether the problem is an addition, substraction, multiplication or division problem.
