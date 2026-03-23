@@ -12,3 +12,14 @@ Year 3: $xxxxxx
 ...
 Year N: $xxxxxx
 */
+
+function func(){
+    ipb = parseFloat(document.getElementById("IPB").value)
+    ir = parseFloat(document.getElementById("IR").value)
+    ta = parseFloat(document.getElementById("TA").value)
+    t = parseFloat(document.getElementById("T").value)
+    output = document.getElementById("output")
+    output = ""
+    formula = Math.pow(ipb*(1+(ir/ta)),ta*t)
+    output.innerHTML = formula
+}
