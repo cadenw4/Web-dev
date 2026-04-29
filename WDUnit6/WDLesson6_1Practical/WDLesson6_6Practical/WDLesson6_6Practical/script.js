@@ -6,6 +6,7 @@ async function init(){
   info = await fetch(link);
   data = await info.json();
   
+  
   let output = document.getElementById("output");
   let build = "";
 

@@ -17,11 +17,14 @@
           <div class="card" id="rightPanel">
         <h1>Motor Vehicle Collisions</h1>
         <div>
-          <input type= "text" placeholder="Enter Street Name" id = "ieatpoo">
-          <input type="button" value="Search" onclick=""
+          <input type= "text" placeholder="Enter Street Name" id = "st">
+          <input type="text" placeholder="Enter # of Injured People" id="injury">
+          <button onclick="filterByInj();filterByBoth();filterBySt();">Search</button>
         </div>
         <div id="result"></div>
-        
+        <div class="card">
+
+        </div> 
         <div id="output" class="container"></div>
 
       </div>
