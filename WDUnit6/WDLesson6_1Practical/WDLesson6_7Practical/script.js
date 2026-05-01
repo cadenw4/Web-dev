@@ -13,7 +13,7 @@ async function init(){
 
     let collisions = data[i];
       if(collisions.on_street_name == null){
-  collisions.off_street_name = ""
+  collisions.on_street_name = ""
 }
   if(collisions.off_street_name == null){
   collisions.off_street_name = ""
@@ -44,7 +44,7 @@ function filterBySt(){
 for(let i = 0; i < data.length; i+=1){
     let collisions = data[i];
       if(collisions.on_street_name == null){
-  collisions.off_street_name = ""
+  collisions.on_street_name = ""
 }
 if(collisions.off_street_name == null){
   collisions.off_street_name = ""
@@ -80,7 +80,7 @@ function filterByInj(){
 for(let i = 0; i < data.length; i+=1){
     let collisions = data[i];
         if(collisions.on_street_name == null){
-  collisions.off_street_name = ""
+  collisions.on_street_name = ""
 }
   if(collisions.off_street_name == null){
   collisions.off_street_name = ""
@@ -116,7 +116,7 @@ function filterByBoth(){
 for(let i = 0; i < data.length; i+=1){
     let collisions = data[i];
         if(collisions.on_street_name == null){
-  collisions.off_street_name = ""
+  collisions.on_street_name = ""
 }
   if(collisions.off_street_name == null){
   collisions.off_street_name = ""
@@ -150,7 +150,7 @@ function reset(){
 for(let i = 0; i < data.length; i+=1){
     let collisions = data[i];
         if(collisions.on_street_name == null){
-  collisions.off_street_name = ""
+  collisions.on_street_name = ""
 }
   if(collisions.off_street_name == null){
   collisions.off_street_name = ""
