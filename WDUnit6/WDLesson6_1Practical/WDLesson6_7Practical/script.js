@@ -7,7 +7,17 @@ async function init(){
   let output = document.getElementById("output");
   let build = "";
 
+function undefinedfilter(){
+    let i = 0; i < data.length; i+=1
+    let collisions = data[i];
+    if (collisions.off_street_name == "undefined"){
+      collisions.off_street_name == ""
+    }
+  }
+
+
   for(let i = 0; i < data.length; i+=1){
+    undefinedfilter()
     let collisions = data[i];
     build += `<div class="fitted card">
                  <h2>${collisions.crash_date} ${collisions.crash_time}</h2>
@@ -29,7 +39,9 @@ function filterBySt(){
   let output = document.getElementById("output");
   let street = document.getElementById("st").value;
   let injured = parseFloat(document.getElementById("injury")).value;
+  let result = document.getElementById("result");
   let build = "";
+  let ct = 0;
 for(let i = 0; i < data.length; i+=1){
     let collisions = data[i];
     if (street == collisions.on_street_name){
@@ -44,8 +56,10 @@ for(let i = 0; i < data.length; i+=1){
                  <p>${collisions.contributing_factor_vehicle_1}</p>
                  <hr>
                  <p>${collisions.contributing_factor_vehicle_2}</p>
-              </div>`    
+              </div>` 
+              ct +=1   
   }
+  result.innerHTML = `${ct} Results found.`
   output.innerHTML = build;
 }
 }
@@ -54,7 +68,9 @@ function filterByInj(){
   let output = document.getElementById("output");
   let street = document.getElementById("st").value;
   let injured = (document.getElementById("injury")).value;
+  let result = document.getElementById("result");
   let build = "";
+  let ct = 0;
 for(let i = 0; i < data.length; i+=1){
     let collisions = data[i];
     if (injured == collisions.number_of_persons_injured){
@@ -69,8 +85,11 @@ for(let i = 0; i < data.length; i+=1){
                  <p>${collisions.contributing_factor_vehicle_1}</p>
                  <hr>
                  <p>${collisions.contributing_factor_vehicle_2}</p>
-              </div>`    
+              </div>`
+
+              ct +=1    
   }
+  result.innerHTML = `${ct} Results found.`
   output.innerHTML = build;
 }
 }
@@ -79,7 +98,9 @@ function filterByBoth(){
   let output = document.getElementById("output");
   let injured = document.getElementById("injury").value;
   let street = document.getElementById("st").value;
+  let result = document.getElementById("result");
   let build = "";
+  let ct = 0;
 for(let i = 0; i < data.length; i+=1){
     let collisions = data[i];
     if (injured == collisions.number_of_persons_injured && street == collisions.on_street_name){
@@ -95,8 +116,40 @@ for(let i = 0; i < data.length; i+=1){
                  <hr>
                  <p>${collisions.contributing_factor_vehicle_2}</p>
               </div>`    
+              ct +=1
   }
+  result.innerHTML = `${ct} Results found.`
   output.innerHTML = build;
 }
+}
+
+
+
+
+
+function filter(){
+  let output = document.getElementById("output");
+  let injured = document.getElementById("injury").value;
+  let street = document.getElementById("st").value;
+ 
+    if(injured == "" && street != ""){
+      console.log("Street")
+      filterBySt()
+    }else if(injured != "" && street == ""){
+      console.log("Injury")
+      filterByInj()
+    }else if(injured != "" && street != "" ){
+      console.log("Both")
+      filterByBoth()
+    }
+  // if(injured == "" && street == collisions.on_street_name){
+  //   filterBySt()}
+  //   else if (injured == collisions.number_of_persons_injured && street == ""){
+  //   filterByInj()
+  //   }
+  //     else if (injured == collisions.number_of_persons_injured && street == collisions.on_street_name ){
+  //   filterByBoth()}
+
+  
 }
 
